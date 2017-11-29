@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>神器 Emacs 神之编辑器使用入门(一) | IT工具控</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="简介（Introduction）相信很多从事计算机软件开发的人都听说过emacs，但是真正掌握甚至入门emacs的都少之又少。emacs是”Editing MACros”的缩写, 是一款古老的文本编辑器，同时也是一个操作系统。emacs的默认配置相对于那些现代的文本编辑器显得十分不友好，但是经过一番折腾后也能配置成一个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="神器 Emacs 神之编辑器使用入门(一)">
+<meta property="og:url" content="http://sharingtools.github.com/2017/11/29/emacs/index.html">
+<meta property="og:site_name" content="IT工具控">
+<meta property="og:description" content="简介（Introduction）相信很多从事计算机软件开发的人都听说过emacs，但是真正掌握甚至入门emacs的都少之又少。emacs是”Editing MACros”的缩写, 是一款古老的文本编辑器，同时也是一个操作系统。emacs的默认配置相对于那些现代的文本编辑器显得十分不友好，但是经过一番折腾后也能配置成一个功能强大的IDE，本文仅做一些简单的入门介绍，让那些刚接触emacs的读者对em">
+<meta property="og:updated_time" content="2017-11-29T01:47:17.906Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="神器 Emacs 神之编辑器使用入门(一)">
+<meta name="twitter:description" content="简介（Introduction）相信很多从事计算机软件开发的人都听说过emacs，但是真正掌握甚至入门emacs的都少之又少。emacs是”Editing MACros”的缩写, 是一款古老的文本编辑器，同时也是一个操作系统。emacs的默认配置相对于那些现代的文本编辑器显得十分不友好，但是经过一番折腾后也能配置成一个功能强大的IDE，本文仅做一些简单的入门介绍，让那些刚接触emacs的读者对em">
+  
+    <link rel="alternate" href="/atom.xml" title="IT工具控" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">IT工具控</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://sharingtools.github.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-emacs" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/29/emacs/" class="article-date">
+  <time datetime="2017-11-29T01:14:15.992Z" itemprop="datePublished">2017-11-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      神器 Emacs 神之编辑器使用入门(一)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="简介（Introduction）"><a href="#简介（Introduction）" class="headerlink" title="简介（Introduction）"></a>简介（Introduction）</h1><p>相信很多从事计算机软件开发的人都听说过emacs，但是真正掌握甚至入门emacs的都少之又少。emacs是”Editing MACros”的缩写, 是一款古老的文本编辑器，同时也是一个操作系统。emacs的默认配置相对于那些现代的文本编辑器显得十分不友好，但是经过一番折腾后也能配置成一个功能强大的IDE，本文仅做一些简单的入门介绍，让那些刚接触emacs的读者对emacs有个粗略的了解。</p>
+<p>[神器] Emacs 神之编辑器使用入门(一)</p>
+<p>常见的文本编辑器学习曲线图</p>
+<h1 id="快速上手（Getting-Started）"><a href="#快速上手（Getting-Started）" class="headerlink" title="快速上手（Getting Started）"></a>快速上手（Getting Started）</h1><p>打开emacs后会呈现如下界面，很多刚接触emacs的人在这一步就被吓住了。</p>
+<p>[神器] Emacs 神之编辑器使用入门(一)</p>
+<p>Welcome to GNU Emacs</p>
+<p>在emacs中规定了大写的C代表Control(键盘上的Ctrl键)，而M代表Meta(键盘上的Alt键)，S则代表Shift(键盘上的Shift键)。下面是一下常用的快捷键:</p>
+<p>C-x C-f 打开/新建文件<br>C-x C-s 保存当前缓冲区<br>C-x C-c 关闭Emacs<br>C-f 前进一个字符<br>C-b 后退一个字符<br>C-p 上一行<br>C-n 下一行<br>M-f 前进一个单词<br>M-b 后退一个单词<br>C-a 行首<br>C-e 行尾<br>C-v 下翻一页<br>M-v 上翻一页<br>M-&lt; 文件头<br>M-&gt; 文件尾<br>C-Space 设置开始标记<br>C-@ 设置开始标记(C-space可能被操作系统拦截)<br>M-w 复制标记区内容<br>C-y 帖粘<br>M-u 使光标处的单词大写<br>M-l 使光标处的单词小写<br>M-c 使光标处单词首字母大写<br>C-k 删除一行<br>C-s 向下搜索<br>C-r 向上搜索<br>M-% 替换<br>C-x u 撤销操作</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sharingtools.github.com/2017/11/29/emacs/" data-id="cjakdwm9g00005wur7hadw2xj" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/29/emacs/">神器 Emacs 神之编辑器使用入门(一)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 SharingTools<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
